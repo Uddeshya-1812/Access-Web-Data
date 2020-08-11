@@ -1,0 +1,13 @@
+ReviewTitle:
+    css: 'div.a-section div.a-section div.a-section:nth-of-type(n+2) a.a-size-base span'
+    multiple: true
+    type: Text
+ReviewText:
+    css: 'div.a-row.a-spacing-small span.a-size-base span'
+    multiple: true
+    type: Text
+ReviewDate:
+    css: 'div.a-row div.a-section span.a-size-base.a-color-secondary'
+    multiple: true
+    type: Text
+
