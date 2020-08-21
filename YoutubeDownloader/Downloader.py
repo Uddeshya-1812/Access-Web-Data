@@ -41,6 +41,8 @@ parent_link = 'https://www.youtube.com'
 
 video_data = list((pattern.findall(link_dictionary[0])))
 
+
+
 no_of_videos = len(video_data)
 print(no_of_videos, 'videos to download')
 
@@ -60,4 +62,7 @@ for i in video_links:
 	except:print('Not a video...Preprocessing error')
 
 #All 100 videos will be downloaded by the end of this	
- 
+try:	
+	os.system('clear')
+except:
+	os.system('cls')
