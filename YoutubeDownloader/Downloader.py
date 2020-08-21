@@ -46,7 +46,7 @@ print(no_of_videos, 'videos to download')
 
 video_links = []
 for i in range(no_of_videos):
-    video_links.append(parent_link + parent_link + video_data[i].split(',')[0][:-6])
+    video_links.append(parent_link + video_data[i].split(',')[0][:-6])
 
 for i in video_links:
 	video = YouTube(i)
