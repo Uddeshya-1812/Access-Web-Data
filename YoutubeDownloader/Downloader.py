@@ -26,6 +26,7 @@ except:print('Please install important modules as re,requests,json')
 
 print( "\033[1m" + 'Initializing Download' +  "\033[0m")
 
+#Change the Playlist Link below for different video playlist
 playlist_link = 'https://www.youtube.com/playlist?list=PLLssT5z_DsK-h9vYZkQkYNWcItqhlRJLN'
 req = Request(playlist_link)
 webpage = urlopen(req).read().decode('unicode_escape')  
@@ -47,14 +48,16 @@ print(no_of_videos, 'videos to download')
 video_links = []
 for i in range(no_of_videos):
     video_links.append(parent_link + video_data[i].split(',')[0][:-6])
-
+    
+    
 for i in video_links:
-	video = YouTube(i)
-	print(video.title)
-	stream = video.streams.first()
-	stream.download()
+	try:
+		video = YouTube(i)
+		print(video.title)
+		stream = video.streams.first()
+		stream.download()
+		
+	except:print('Not a video...Preprocessing error')
 
-'''
-#All 100 videos will be downloaded by the end of this
-'''	
+#All 100 videos will be downloaded by the end of this	
  
