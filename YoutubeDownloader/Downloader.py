@@ -27,7 +27,7 @@ except:print('Please install important modules as re,requests,json')
 print( "\033[1m" + 'Initializing Download' +  "\033[0m")
 
 #Change the Playlist Link below for different video playlist
-playlist_link = 'https://www.youtube.com/playlist?list=PLLssT5z_DsK-h9vYZkQkYNWcItqhlRJLN'
+playlist_link = input('Enter the PlayList link :: ')
 req = Request(playlist_link)
 webpage = urlopen(req).read().decode('unicode_escape')  
 
